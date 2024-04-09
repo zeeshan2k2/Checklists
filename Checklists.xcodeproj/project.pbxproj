@@ -13,6 +13,7 @@
 		C16DEBF22BC14986005C84DF /* Base in Resources */ = {isa = PBXBuildFile; fileRef = C16DEBF12BC14986005C84DF /* Base */; };
 		C16DEBF42BC14987005C84DF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C16DEBF32BC14987005C84DF /* Assets.xcassets */; };
 		C16DEBF72BC14987005C84DF /* Base in Resources */ = {isa = PBXBuildFile; fileRef = C16DEBF62BC14987005C84DF /* Base */; };
+		C180920E2BC598D700268626 /* ChecklistItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = C180920D2BC598D700268626 /* ChecklistItem.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		C16DEBF32BC14987005C84DF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C16DEBF62BC14987005C84DF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C16DEBF82BC14987005C84DF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C180920D2BC598D700268626 /* ChecklistItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChecklistItem.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +60,7 @@
 			children = (
 				C16DEBEA2BC14986005C84DF /* AppDelegate.swift */,
 				C16DEBEC2BC14986005C84DF /* SceneDelegate.swift */,
+				C180920D2BC598D700268626 /* ChecklistItem.swift */,
 				C16DEBEE2BC14986005C84DF /* ChecklistViewController.swift */,
 				C16DEBF02BC14986005C84DF /* Main.storyboard */,
 				C16DEBF32BC14987005C84DF /* Assets.xcassets */,
@@ -141,6 +144,7 @@
 				C16DEBEF2BC14986005C84DF /* ChecklistViewController.swift in Sources */,
 				C16DEBEB2BC14986005C84DF /* AppDelegate.swift in Sources */,
 				C16DEBED2BC14986005C84DF /* SceneDelegate.swift in Sources */,
+				C180920E2BC598D700268626 /* ChecklistItem.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
