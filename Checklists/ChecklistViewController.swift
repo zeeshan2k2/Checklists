@@ -8,8 +8,6 @@
 import UIKit
 
 class ChecklistViewController: UITableViewController, AddItemViewControllerDelegate{
-
-    
     
     var items = [ChecklistItem]()
     
