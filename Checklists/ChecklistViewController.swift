@@ -8,34 +8,8 @@
 import UIKit
 
 class ChecklistViewController: UITableViewController, AddItemViewControllerDelegate{
-    func addItemViewControllerDidCancel(_ controller: AddItemViewController) {
-        navigationController?.popViewController(animated: true)
-    }
+
     
-    func addItemViewController(_ controller: AddItemViewController, didFinishEditing item: ChecklistItem) {
-        if let index = items.index(of: item) {
-            let indexPath = IndexPath(row: index, section: 0)
-            if let cell = tableView.cellForRow(at: indexPath) {
-                configureText(for: cell, with: item)
-            }
-        }
-        
-        navigationController?.popViewController(animated: true)
-    }
-    
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "AddItem" {
-            let controller = segue.destination as! AddItemViewController
-            controller.delegate = self
-        } else if segue.identifier == "EditItem" {
-            let controller = segue.destination as! AddItemViewController
-            controller.delegate = self
-        
-        if let indexPath = tableView.indexPath(for: sender as! UITableViewCell) {
-            controller.itemToEdit = items[indexPath.row]
-        }
-      }
-    }
     
     var items = [ChecklistItem]()
     
@@ -71,6 +45,46 @@ class ChecklistViewController: UITableViewController, AddItemViewControllerDeleg
     }
     
     @IBOutlet var textLabel: UILabel!
+    
+    func addItemViewControllerDidCancel(_ controller: AddItemViewController) {
+        navigationController?.popViewController(animated: true)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "AddItem" {
+            let controller = segue.destination as! AddItemViewController
+            controller.delegate = self
+        } else if segue.identifier == "EditItem" {
+            let controller = segue.destination as! AddItemViewController
+            controller.delegate = self
+        
+        if let indexPath = tableView.indexPath(for: sender as! UITableViewCell) {
+            controller.itemToEdit = items[indexPath.row]
+        }
+      }
+    }
+    
+    func addItemViewController(_ controller: AddItemViewController, didFinishEditing item: ChecklistItem) {
+        if let index = items.firstIndex(of: item) {
+            let indexPath = IndexPath(row: index, section: 0)
+            if let cell = tableView.cellForRow(at: indexPath) {
+                configureText(for: cell, with: item)
+            }
+        }
+        
+        navigationController?.popViewController(animated: true)
+    }
+    
+    func addItemViewController(_ controller: AddItemViewController, didFinishAdding item: ChecklistItem) {
+        let newRowIndex = items.count
+        items.append(item)
+        
+        let indexPath = IndexPath(row: newRowIndex, section: 0)
+        let indexPaths = [indexPath]
+        tableView.insertRows(at: indexPaths, with: .automatic)
+        
+        navigationController?.popViewController(animated:true)
+    }
     
     func configureCheckmark(for cell: UITableViewCell, with item: ChecklistItem) {
         

@@ -1,19 +1,22 @@
 import UIKit
 
-//protocol AddItemViewControllerDelegate: AnyObject {
-//    
-//    func addItemViewControllerDidCancel(_ controller: AddItemViewController)
-//    
-//    func addItemViewController(_ controller: AddItemViewController, didFinishAdding item: ChecklistItem)
-//    
-//    func addItemViewController(_ controller: AddItemViewController, didFinishEditing item: ChecklistItem)
-//}
-
 protocol AddItemViewControllerDelegate: AnyObject {
-  func addItemViewControllerDidCancel(_ controller: AddItemViewController)
-  func addItemViewController(_ controller: AddItemViewController, didFinishAdding item: ChecklistItem)
-  func addItemViewController(_ controller: AddItemViewController, didFinishEditing item: ChecklistItem)
+    
+    func addItemViewControllerDidCancel(_ controller: AddItemViewController)
+    
+    //    func addItemViewController(_ controller: AddItemViewController, didFinishAdding item: ChecklistItem)
+    
+    func addItemViewController(_ controller: AddItemViewController, didFinishEditing item: ChecklistItem)
+    
+    func addItemViewController(_ controller: AddItemViewController, didFinishAdding item: ChecklistItem)
+    
 }
+
+//protocol AddItemViewControllerDelegate: AnyObject {
+//  func addItemViewControllerDidCancel(_ controller: AddItemViewController)
+//  func addItemViewController(_ controller: AddItemViewController, didFinishAdding item: ChecklistItem)
+//  func addItemViewController(_ controller: AddItemViewController, didFinishEditing item: ChecklistItem)
+//}
 
 class AddItemViewController: UITableViewController, UITextFieldDelegate {
         @IBOutlet weak var doneBarButton: UIBarButtonItem!
