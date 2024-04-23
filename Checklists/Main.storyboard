@@ -24,23 +24,23 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" tag="1000" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fB6-9x-gjX">
-                                            <rect key="frame" x="24" y="12" width="237.5" height="21"/>
+                                            <rect key="frame" x="36" y="12" width="225.5" height="21"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" tag="1001" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="✔︎" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qRt-Lv-aWw">
-                                            <rect key="frame" x="4" y="12" width="15" height="21"/>
+                                            <rect key="frame" x="11" y="12" width="15" height="21"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
                                     <constraints>
-                                        <constraint firstItem="fB6-9x-gjX" firstAttribute="leading" secondItem="qRt-Lv-aWw" secondAttribute="trailing" constant="5" id="BLO-Ol-taT"/>
+                                        <constraint firstItem="fB6-9x-gjX" firstAttribute="leading" secondItem="qRt-Lv-aWw" secondAttribute="trailing" constant="10" id="BLO-Ol-taT"/>
                                         <constraint firstAttribute="bottom" secondItem="fB6-9x-gjX" secondAttribute="bottom" constant="10.5" id="E7Q-24-rBQ"/>
                                         <constraint firstItem="qRt-Lv-aWw" firstAttribute="top" secondItem="ycj-dl-5Oq" secondAttribute="top" constant="12" id="OgP-ud-Ll4"/>
-                                        <constraint firstItem="fB6-9x-gjX" firstAttribute="leading" secondItem="ycj-dl-5Oq" secondAttribute="leading" constant="24" id="URy-0t-Xef"/>
+                                        <constraint firstItem="fB6-9x-gjX" firstAttribute="leading" secondItem="ycj-dl-5Oq" secondAttribute="leading" constant="36" id="URy-0t-Xef"/>
                                         <constraint firstAttribute="trailing" secondItem="fB6-9x-gjX" secondAttribute="trailing" id="gnu-jN-HLL"/>
                                         <constraint firstItem="fB6-9x-gjX" firstAttribute="top" secondItem="ycj-dl-5Oq" secondAttribute="top" constant="12" id="oEP-gG-yUB"/>
                                     </constraints>
@@ -138,7 +138,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Tzv-UR-xIK" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="guF-uC-KD5">
-                        <rect key="frame" x="0.0" y="20" width="320" height="98"/>
+                        <rect key="frame" x="0.0" y="20" width="320" height="104"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
