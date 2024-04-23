@@ -14,6 +14,15 @@ class ChecklistViewController: UITableViewController, AddItemViewControllerDeleg
     
     func addItemViewController(_ controller: AddItemViewController, didFinishAdding item: ChecklistItem) {
         navigationController?.popViewController(animated: true)
+        
+//      adding new elements to table
+        let newRowIndex = items.count
+        items.append(item)
+        
+        let indexPath = IndexPath(row: newRowIndex, section: 0)
+        let indexPaths = [indexPath]
+        tableView.insertRows(at: indexPaths, with: .automatic)
+        navigationController?.popViewController(animated: true)
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -58,18 +67,19 @@ class ChecklistViewController: UITableViewController, AddItemViewControllerDeleg
     
     @IBOutlet var textLabel: UILabel!
     
+//    removing this because we no longer need it
     
-    @IBAction func addItem(_ sender: Any) {
-        let newRowIndex = items.count
-        
-        let item = ChecklistItem()
-        item.text = "I am a new row"
-        items.append(item)
-        
-        let indexPath = IndexPath(row: newRowIndex, section: 0)
-        let indexPaths = [indexPath]
-        tableView.insertRows(at: indexPaths, with: .automatic)
-    }
+//    @IBAction func addItem(_ sender: Any) {
+//        let newRowIndex = items.count
+//        
+//        let item = ChecklistItem()
+//        item.text = "I am a new row"
+//        items.append(item)
+//        
+//        let indexPath = IndexPath(row: newRowIndex, section: 0)
+//        let indexPaths = [indexPath]
+//        tableView.insertRows(at: indexPaths, with: .automatic)
+//    }
     func configureCheckmark(for cell: UITableViewCell, with item: ChecklistItem) {
         
 //        let item = items[indexPath.row]
