@@ -73,6 +73,7 @@ class ChecklistViewController: UITableViewController, AddItemViewControllerDeleg
         navigationController?.popViewController(animated: true)
     }
     
+    
     func addItemViewController(_ controller: AddItemViewController, didFinishAdding item: ChecklistItem) {
         let newRowIndex = items.count
         items.append(item)
@@ -83,6 +84,7 @@ class ChecklistViewController: UITableViewController, AddItemViewControllerDeleg
         
         navigationController?.popViewController(animated:true)
     }
+    
     
     func configureCheckmark(for cell: UITableViewCell, with item: ChecklistItem) {
         

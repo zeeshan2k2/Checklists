@@ -11,10 +11,10 @@ protocol AddItemViewControllerDelegate: AnyObject {
 }
 
 class AddItemViewController: UITableViewController, UITextFieldDelegate {
-        @IBOutlet weak var doneBarButton: UIBarButtonItem!
-        @IBOutlet weak var textField: UITextField!
-        
-        weak var delegate: AddItemViewControllerDelegate?
+    @IBOutlet weak var doneBarButton: UIBarButtonItem!
+    @IBOutlet weak var textField: UITextField!
+    
+    weak var delegate: AddItemViewControllerDelegate?
 
     var itemToEdit: ChecklistItem?
     
@@ -52,7 +52,7 @@ class AddItemViewController: UITableViewController, UITextFieldDelegate {
     override func tableView(_ tableView: UITableView,
                       willSelectRowAt indexPath: IndexPath)
     -> IndexPath? {
-    return nil
+        return nil
     }
 
     func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
