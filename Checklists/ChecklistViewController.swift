@@ -18,7 +18,8 @@ class ChecklistViewController: UITableViewController, AddItemViewControllerDeleg
         print("Documents folder is \(documentsDirectory())")
         print("Data file path is \(dataFilePath())")
         
-        navigationController?.navigationBar.prefersLargeTitles = true
+//        navigationController?.navigationBar.prefersLargeTitles = true
+        navigationItem.largeTitleDisplayMode = .never
         
         loadChecklistItems()
         
