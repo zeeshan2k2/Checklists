@@ -13,7 +13,6 @@ class AllListsViewController: UITableViewController, ListDetailViewControllerDel
   
     override func viewDidLoad() {
         super.viewDidLoad()
-//        tableView.register(UITableViewCell.self, forCellReuseIdentifier: cellIdentifier)
     }
 
     override func viewDidAppear(_ animated: Bool) {

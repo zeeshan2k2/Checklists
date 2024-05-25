@@ -72,7 +72,6 @@ class ChecklistViewController: UITableViewController, ItemDetailViewControllerDe
     
     func configureCheckmark(for cell: UITableViewCell, with item: ChecklistItem) {
         
-//        let item = items[indexPath.row]
         let label = cell.viewWithTag(1001) as! UILabel
         if item.checked {
             label.text = "✔︎"
@@ -84,6 +83,7 @@ class ChecklistViewController: UITableViewController, ItemDetailViewControllerDe
     func configureText(for cell: UITableViewCell, with item: ChecklistItem) {
         let label = cell.viewWithTag(1000) as! UILabel
         label.text = item.text
+        label.text = "\(item.text)"
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {

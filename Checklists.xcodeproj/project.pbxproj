@@ -10,13 +10,13 @@
 		C13B6BDD2C0006C600F54C92 /* AllListsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C13B6BDC2C0006C600F54C92 /* AllListsViewController.swift */; };
 		C13B6BDF2C000A1000F54C92 /* Checklist.swift in Sources */ = {isa = PBXBuildFile; fileRef = C13B6BDE2C000A1000F54C92 /* Checklist.swift */; };
 		C145EB272C02631200F18EAD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C145EB262C02631200F18EAD /* Main.storyboard */; };
+		C145EB282C02759B00F18EAD /* ChecklistViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C16DEBEE2BC14986005C84DF /* ChecklistViewController.swift */; };
 		C166D9EE2C00B97B004E376D /* ListDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C166D9ED2C00B97B004E376D /* ListDetailViewController.swift */; };
 		C166D9F02C00D17B004E376D /* DataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C166D9EF2C00D17B004E376D /* DataModel.swift */; };
 		C166D9F22C015753004E376D /* ItemDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C166D9F12C015752004E376D /* ItemDetailViewController.swift */; };
 		C16BACCB2C02249B009307B2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C16BACCA2C02249B009307B2 /* Assets.xcassets */; };
 		C16BACCD2C022754009307B2 /* IconPickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C16BACCC2C022754009307B2 /* IconPickerViewController.swift */; };
 		C16DEBEB2BC14986005C84DF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C16DEBEA2BC14986005C84DF /* AppDelegate.swift */; };
-		C16DEBEF2BC14986005C84DF /* ChecklistViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C16DEBEE2BC14986005C84DF /* ChecklistViewController.swift */; };
 		C180920E2BC598D700268626 /* ChecklistItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = C180920D2BC598D700268626 /* ChecklistItem.swift */; };
 		C18887B12BD7E031006AFECE /* AddItemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C180920F2BC5A82F00268626 /* AddItemViewController.swift */; };
 /* End PBXBuildFile section */
@@ -180,9 +180,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				C18887B12BD7E031006AFECE /* AddItemViewController.swift in Sources */,
-				C16DEBEF2BC14986005C84DF /* ChecklistViewController.swift in Sources */,
 				C13B6BDD2C0006C600F54C92 /* AllListsViewController.swift in Sources */,
 				C16BACCD2C022754009307B2 /* IconPickerViewController.swift in Sources */,
+				C145EB282C02759B00F18EAD /* ChecklistViewController.swift in Sources */,
 				C16DEBEB2BC14986005C84DF /* AppDelegate.swift in Sources */,
 				C180920E2BC598D700268626 /* ChecklistItem.swift in Sources */,
 				C166D9F22C015753004E376D /* ItemDetailViewController.swift in Sources */,
