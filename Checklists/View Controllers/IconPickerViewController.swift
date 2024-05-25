@@ -8,7 +8,7 @@
 import Foundation
 import UIKit
 
-protocol IconPickerViewControllerDelegate: class {
+protocol IconPickerViewControllerDelegate: AnyObject {
     func iconPicker(_ picker: IconPickerViewController, didPick iconName: String)
 }
 
@@ -18,7 +18,7 @@ class IconPickerViewController: UITableViewController {
   
   // MARK:- Table View Delegates
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-      return icons.count
+        return icons.count
     }
   
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -30,9 +30,9 @@ class IconPickerViewController: UITableViewController {
     }
   
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-      if let delegate = delegate {
-          let iconName = icons[indexPath.row]
-          delegate.iconPicker(self, didPick: iconName)
+        if let delegate = delegate {
+            let iconName = icons[indexPath.row]
+            delegate.iconPicker(self, didPick: iconName)
         }
     }
     

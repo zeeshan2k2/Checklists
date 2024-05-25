@@ -43,14 +43,13 @@ class ListDetailViewController: UITableViewController, UITextFieldDelegate, Icon
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        
         textField.becomeFirstResponder()
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "PickerIcon" {
+        if segue.identifier == "PickIcon" {
             let controller = segue.destination as! IconPickerViewController
-            controller.delegate.self
+            controller.delegate = self
         }
     }
     
@@ -59,9 +58,6 @@ class ListDetailViewController: UITableViewController, UITextFieldDelegate, Icon
     }
     
     @IBAction func done() {
-        
-        let checklist = Checklist(name: textField.text!, iconName: iconName)
-        
         if let checklist = checklistToEdit {
             checklist.name = textField.text!
             checklist.iconName = iconName
@@ -96,6 +92,7 @@ class ListDetailViewController: UITableViewController, UITextFieldDelegate, Icon
     
     func iconPicker(_ picker: IconPickerViewController, didPick iconName: String) {
         self.iconName = iconName
+        iconImage.image = UIImage(named: iconName)
         navigationController?.popViewController(animated: true)
     }
 }
