@@ -127,31 +127,31 @@ class ChecklistViewController: UITableViewController, ItemDetailViewControllerDe
     }
     
     func itemDetailViewControllerDidCancel(_ controller: ItemDetailViewController) {
-      navigationController?.popViewController(animated:true)
-      saveChecklistItems()
+        navigationController?.popViewController(animated:true)
+        saveChecklistItems()
     }
     
     func itemDetailViewController(_ controller: ItemDetailViewController, didFinishAdding item: ChecklistItem) {
-      let newRowIndex = checklist.items.count
-      checklist.items.append(item)
-      
-      let indexPath = IndexPath(row: newRowIndex, section: 0)
-      let indexPaths = [indexPath]
-      tableView.insertRows(at: indexPaths, with: .automatic)
-      
-      navigationController?.popViewController(animated:true)
-      saveChecklistItems()
+        let newRowIndex = checklist.items.count
+        checklist.items.append(item)
+
+        let indexPath = IndexPath(row: newRowIndex, section: 0)
+        let indexPaths = [indexPath]
+        tableView.insertRows(at: indexPaths, with: .automatic)
+
+        navigationController?.popViewController(animated:true)
+        saveChecklistItems()
     }
     
     func itemDetailViewController(_ controller: ItemDetailViewController, didFinishEditing item: ChecklistItem) {
-      if let index = checklist.items.index(of: item) {
-        let indexPath = IndexPath(row: index, section: 0)
-        if let cell = tableView.cellForRow(at: indexPath) {
-          configureText(for: cell, with: item)
+        if let index = checklist.items.index(of: item) {
+            let indexPath = IndexPath(row: index, section: 0)
+            if let cell = tableView.cellForRow(at: indexPath) {
+                configureText(for: cell, with: item)
+            }
         }
-      }
-      navigationController?.popViewController(animated:true)
-      saveChecklistItems()
+        navigationController?.popViewController(animated:true)
+        saveChecklistItems()
     }
     
 }
