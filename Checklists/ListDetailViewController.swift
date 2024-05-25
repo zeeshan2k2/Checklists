@@ -9,9 +9,9 @@ import Foundation
 import UIKit
 
 protocol ListDetailViewControllerDelegate: class {
-  func listDetailViewControllerDidCancel(_ controller: ListDetailViewController)
-  func listDetailViewController(_ controller: ListDetailViewController, didFinishAdding checklist: Checklist)
-  func listDetailViewController(_ controller: ListDetailViewController, didFinishEditing checklist: Checklist)
+    func listDetailViewControllerDidCancel(_ controller: ListDetailViewController)
+    func listDetailViewController(_ controller: ListDetailViewController, didFinishAdding checklist: Checklist)
+    func listDetailViewController(_ controller: ListDetailViewController, didFinishEditing checklist: Checklist)
 }
 
 class ListDetailViewController: UITableViewController, UITextFieldDelegate {
@@ -25,55 +25,55 @@ class ListDetailViewController: UITableViewController, UITextFieldDelegate {
     var checklistToEdit: Checklist?
     
     override func viewDidLoad() {
-      super.viewDidLoad()
-      
-      if let checklist = checklistToEdit {
-        title = "Edit Checklist"
-        textField.text = checklist.name
-        doneBarButton.isEnabled = true
-      }
+        super.viewDidLoad()
+
+        if let checklist = checklistToEdit {
+            title = "Edit Checklist"
+            textField.text = checklist.name
+            doneBarButton.isEnabled = true
+        }
     }
     
     override func viewWillAppear(_ animated: Bool) {
-      super.viewWillAppear(animated)
+        super.viewWillAppear(animated)
         
-      textField.becomeFirstResponder()
+        textField.becomeFirstResponder()
     }
     
     @IBAction func cancel() {
-      delegate?.listDetailViewControllerDidCancel(self)
+        delegate?.listDetailViewControllerDidCancel(self)
     }
     
     @IBAction func done() {
         
       if let checklist = checklistToEdit {
-        checklist.name = textField.text!
-        delegate?.listDetailViewController(self, didFinishEditing: checklist)
+          checklist.name = textField.text!
+          delegate?.listDetailViewController(self, didFinishEditing: checklist)
       } else {
-        let checklist = Checklist(name: textField.text!)
-        delegate?.listDetailViewController(self,didFinishAdding: checklist)
+          let checklist = Checklist(name: textField.text!)
+          delegate?.listDetailViewController(self,didFinishAdding: checklist)
       }
     }
     
     
     override func tableView(_ tableView: UITableView, willSelectRowAt indexPath: IndexPath) -> IndexPath? {
-      return nil
+        return nil
     }
     
     
     func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
       
-      let oldText = textField.text!
-      let stringRange = Range(range, in:oldText)!
-      let newText = oldText.replacingCharacters(in: stringRange, with: string)
-      doneBarButton.isEnabled = !newText.isEmpty
-      return true
+        let oldText = textField.text!
+        let stringRange = Range(range, in:oldText)!
+        let newText = oldText.replacingCharacters(in: stringRange, with: string)
+        doneBarButton.isEnabled = !newText.isEmpty
+        return true
     }
     
     func textFieldShouldClear(_ textField: UITextField) -> Bool {
         
-      doneBarButton.isEnabled = false
-      return true
+        doneBarButton.isEnabled = false
+        return true
     }
 }
 
