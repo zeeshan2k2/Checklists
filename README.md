@@ -4,4 +4,4 @@
 <img src="https://github.com/zeeshan2k2/Checklists/blob/main/Sub%20Checklist.png" width="250" height="500">
 <img src="https://github.com/zeeshan2k2/Checklists/blob/main/Sub%20Checklist%20Edit.png" width="250" height="500">
 <img src="https://github.com/zeeshan2k2/Checklists/blob/main/date%20editing%20implementation.png" width="250" height="500">
-<img src="https://github.com/zeeshan2k2/Checklists/blob/main/Notification.png" width="250" height="500">
+<img src="https://github.com/zeeshan2k2/Checklists/blob/main/Notification.png" width="140" height="80">
