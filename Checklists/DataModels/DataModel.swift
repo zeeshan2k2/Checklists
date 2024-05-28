@@ -79,7 +79,6 @@ class DataModel {
         if firstTime {
             let checklist = Checklist(name: "List")
             lists.append(checklist)
-
             indexOfSelectedCheckList = 0
             userDefaults.set(false, forKey: "FirstTime")
             userDefaults.synchronize()

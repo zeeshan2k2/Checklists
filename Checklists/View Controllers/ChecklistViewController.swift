@@ -18,7 +18,6 @@ class ChecklistViewController: UITableViewController, ItemDetailViewControllerDe
         loadChecklistItems()
         
         title = checklist.name
-        
     }
     
     @IBOutlet var textLabel: UILabel!
