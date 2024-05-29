@@ -43,7 +43,6 @@ class ChecklistViewController: UITableViewController, ItemDetailViewControllerDe
     
     func loadChecklistItems() {
         let path = dataFilePath()
-        
         if let data = try? Data(contentsOf: path) {
             let decoder = PropertyListDecoder()
             do {

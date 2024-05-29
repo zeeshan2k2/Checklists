@@ -15,7 +15,6 @@ protocol ListDetailViewControllerDelegate: class {
 }
 
 class ListDetailViewController: UITableViewController, UITextFieldDelegate, IconPickerViewControllerDelegate {
-
    
     @IBOutlet weak var textField: UITextField!
     
@@ -76,7 +75,6 @@ class ListDetailViewController: UITableViewController, UITextFieldDelegate, Icon
     
     
     func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
-      
         let oldText = textField.text!
         let stringRange = Range(range, in:oldText)!
         let newText = oldText.replacingCharacters(in: stringRange, with: string)
@@ -85,7 +83,6 @@ class ListDetailViewController: UITableViewController, UITextFieldDelegate, Icon
     }
     
     func textFieldShouldClear(_ textField: UITextField) -> Bool {
-        
         doneBarButton.isEnabled = false
         return true
     }

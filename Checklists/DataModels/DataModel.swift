@@ -89,6 +89,5 @@ class DataModel {
         lists.sort(by: { list1, list2 in
           return list1.name.localizedStandardCompare(list2.name) == .orderedAscending })
     }
-    
-    
+
 }
